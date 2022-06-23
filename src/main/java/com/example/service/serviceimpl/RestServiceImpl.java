@@ -44,7 +44,7 @@ public class RestServiceImpl {
 		ResCommonApi response = new ResCommonApi();
 		try {
 			
-			restMapper.apiCreate(reqCommonApi);
+			restMapper.apiDelete(reqCommonApi);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -58,7 +58,7 @@ public class RestServiceImpl {
 		ResCommonApi response = new ResCommonApi();
 		try {
 			
-			restMapper.apiCreate(reqCommonApi);
+			restMapper.apiGetUserSkillUsername(reqCommonApi);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
