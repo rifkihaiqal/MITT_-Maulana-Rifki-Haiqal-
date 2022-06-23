@@ -36,7 +36,7 @@ import com.example.service.RestService;
 			return callable ;
 		}
 		
-		@RequestMapping(value = "/api/update", method = RequestMethod.POST, produces = "application/json")
+		@RequestMapping(value = "/api/update", method = RequestMethod.PUT, produces = "application/json")
 		public Callable<ResCommonApi> apiUpdate(HttpServletRequest request,
 				@RequestBody ReqCommonApi reqCommonApi){
 			
@@ -52,7 +52,7 @@ import com.example.service.RestService;
 			return callable ;
 		}
 		
-		@RequestMapping(value = "/api/delete", method = RequestMethod.POST, produces = "application/json")
+		@RequestMapping(value = "/api/delete", method = RequestMethod.DELETE, produces = "application/json")
 		public Callable<ResCommonApi> apiDelete(HttpServletRequest request,
 				@RequestBody ReqCommonApi reqCommonApi){
 			
@@ -68,7 +68,7 @@ import com.example.service.RestService;
 			return callable ;
 		}
 		
-		@RequestMapping(value = "/api/getUserSkill/username", method = RequestMethod.POST, produces = "application/json")
+		@RequestMapping(value = "/api/getUserSkill/username", method = RequestMethod.GET, produces = "application/json")
 		public Callable<ResCommonApi> apiGetUserSkillUsername(HttpServletRequest request,
 				@RequestBody ReqCommonApi reqCommonApi){
 			
@@ -84,7 +84,7 @@ import com.example.service.RestService;
 			return callable ;
 		}
 		
-		@RequestMapping(value = "/api/login", method = RequestMethod.POST, produces = "application/json")
+		@RequestMapping(value = "/api/login", method = RequestMethod.GET, produces = "application/json")
 		public Callable<ResCommonApi> apiLogin(HttpServletRequest request,
 				@RequestBody ReqCommonApi reqCommonApi){
 			
@@ -117,7 +117,7 @@ import com.example.service.RestService;
 			return callable ;
 		}
 		
-		@RequestMapping(value = "/api/getSkillLevel", method = RequestMethod.POST, produces = "application/json")
+		@RequestMapping(value = "/api/getSkillLevel", method = RequestMethod.GET, produces = "application/json")
 		public Callable<ResCommonApi> apiGetSkillsLevel(HttpServletRequest request,
 				@RequestBody ReqCommonApi reqCommonApi){
 			
