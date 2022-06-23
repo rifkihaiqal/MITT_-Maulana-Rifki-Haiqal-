@@ -26,4 +26,46 @@ public class RestServiceImpl {
 		}
 		return response;
 	}
+	public ResCommonApi apiUpdate(ReqCommonApi reqCommonApi, HttpServletRequest request){
+		ResCommonApi response = new ResCommonApi();
+		try {
+			
+			restMapper.apiUpdate(reqCommonApi);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			response.setResponseCode(ResponseCode.INVALID_DATA);
+			response.setResponseMessage(ResponseCode.INVALID_DATA);
+			TransactionInterceptor.currentTransactionStatus().setRollbackOnly();
+		}
+		return response;
+	}
+	public ResCommonApi apiDelete(ReqCommonApi reqCommonApi, HttpServletRequest request){
+		ResCommonApi response = new ResCommonApi();
+		try {
+			
+			restMapper.apiCreate(reqCommonApi);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			response.setResponseCode(ResponseCode.INVALID_DATA);
+			response.setResponseMessage(ResponseCode.INVALID_DATA);
+			TransactionInterceptor.currentTransactionStatus().setRollbackOnly();
+		}
+		return response;
+	}
+	public ResCommonApi apiGetUserSkillUsername(ReqCommonApi reqCommonApi, HttpServletRequest request){
+		ResCommonApi response = new ResCommonApi();
+		try {
+			
+			restMapper.apiCreate(reqCommonApi);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			response.setResponseCode(ResponseCode.INVALID_DATA);
+			response.setResponseMessage(ResponseCode.INVALID_DATA);
+			TransactionInterceptor.currentTransactionStatus().setRollbackOnly();
+		}
+		return response;
+	}
 }

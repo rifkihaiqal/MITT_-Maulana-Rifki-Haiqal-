@@ -2,6 +2,7 @@ package com.example.dao;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.dao.DataAccessException;
 
 import com.example.model.ReqCommonApi;
@@ -20,4 +21,9 @@ public interface RestMapper {
 			+ "#{skillId, jdbcType = NUMERIC}, "
 			+ "#{skillLevelId, jdbcType = NUMERIC}, ")
 	void apiCreate(ReqCommonApi reqCommonApi) throws DataAccessException;
+	
+	@Update("update userSkills"
+			+ "set username = (username)"
+			+ "where userSkillId = (userSkillId)")
+	void apiUpdate(ReqCommonApi reqCommonApi) throws DataAccessException;
 }
